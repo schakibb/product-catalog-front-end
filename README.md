@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# Product Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Product Management application built with React, TypeScript, and Tailwind CSS. It allows users to manage a catalog of products, including adding, editing, viewing, and deleting products. The application utilizes React Router for navigation and Lucide React for icons.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- View a list of products with search functionality.
+- Add new products to the catalog.
+- Edit existing product details.
+- Delete products from the catalog.
+- View detailed information about each product.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **React Router DOM**: A library for routing in React applications.
+- **Lucide React**: A collection of icons for React applications.
+- **REST API**: The backend for this application is provided by a REST API, which can be found at [Product Catalog Backend](https://github.com/schakibb/product-catalog-back-end).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone the repository:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/yourusername/product-management-app.git
+   cd product-management-app
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Usage
+
+- Navigate to the home page to view the list of products.
+- Use the "Add Product" button to create a new product.
+- Click on a product to view its details.
+- Use the "Edit" button to modify product information.
+- Click the "Delete" button to remove a product from the catalog.
+
+## API
+
+This application interacts with a REST API for product management. The API endpoints are as follows:
+
+- `GET /api/products`: Retrieve a list of all products.
+- `GET /api/products/:id`: Retrieve a specific product by ID.
+- `POST /api/products/add-product`: Add a new product.
+- `PUT /api/products/:id`: Update an existing product.
+- `DELETE /api/products/:id`: Delete a product by ID.
+
+For more details on the API, please refer to the [Product Catalog Backend](https://github.com/schakibb/product-catalog-back-end).
