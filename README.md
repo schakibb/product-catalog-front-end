@@ -34,7 +34,7 @@ This is a Product Management application built with React, TypeScript, and Tailw
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/product-management-app.git
+   git clone https://github.com/schakibb/product-catalog-front-end.git
    cd product-management-app
    ```
 
